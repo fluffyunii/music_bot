@@ -2,7 +2,7 @@ from ast import alias
 import discord
 from discord.ext import commands
 from youtubesearchpython import VideosSearch
-from yt_dlp import YoutubeDL
+from yt_dlp import YoutubeDLC
 import asyncio
 
 class music_cog(commands.Cog):
@@ -19,7 +19,7 @@ class music_cog(commands.Cog):
         self.FFMPEG_OPTIONS = {'options': '-vn'}
 
         self.vc = None
-        self.ytdl = YoutubeDL(self.YDL_OPTIONS)
+        self.ytdl = YoutubeDLC(self.YDL_OPTIONS)
 
      #searching the item on youtube
     def search_yt(self, item):
